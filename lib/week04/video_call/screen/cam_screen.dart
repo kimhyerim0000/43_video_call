@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:permission_handler/permission_handler.dart';
+import 'p'
 
 class CamScreen extends StatefulWidget {
   Future<bool> init() async { // 권한 관련 작업 모두 실행
