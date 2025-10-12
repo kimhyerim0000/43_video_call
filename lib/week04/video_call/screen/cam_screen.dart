@@ -122,6 +122,9 @@ class _CamScreenState extends State<CamScreen> {
         );
       }else{
         
+        // 아직 내가 채널에 접속하지 않았다면
+        // 로딩 화면을 보여줍니다.
+        return CircularProgressIndicator();
       }
     }
     return Scaffold(
