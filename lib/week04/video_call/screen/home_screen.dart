@@ -68,3 +68,17 @@ class _Logo extends StatelessWidget {
     );
   }
 }
+// _Logo 위젯 바로 아래
+
+class _Image extends StatelessWidget {
+  const _Image({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Image.asset(
+        'asset/img/home_img.png'
+      ),
+    );
+  }
+}
