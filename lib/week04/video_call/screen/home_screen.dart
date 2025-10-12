@@ -36,10 +36,13 @@ class _Logo extends StatelessWidget {
           borderRadius: BorderRadius.circular(16.0),  // 모서리 둥글게 만들기
           boxShadow: [  // 그림자 추가
             BoxShadow(
-              
-            )
-          ]
-        )
+              color: Colors.blue[300]!,
+              blurRadius: 12.0,
+              spreadRadius: 2.0,
+            ),
+          ],
+        ),
+        child: 
       )
     )
   }
