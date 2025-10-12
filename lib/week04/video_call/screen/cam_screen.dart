@@ -61,6 +61,14 @@ class _CamScreenState extends State<CamScreen> {
               uid = null;
             });
           },
+          onUserJoined: (RtcConnection connection, int remoteUid, int elapsed) {
+
+            print('상대가 채널에 입장했습니다. uid: $remoteUid');
+            setState(() {
+              otherUid = remoteUid;
+            });
+          },
+          onUser
         );
       );
     }
