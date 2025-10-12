@@ -116,8 +116,12 @@ class _CamScreenState extends State<CamScreen> {
           // AgoraVideoView 위젯을 통해 보여줄 수 있습니다.
             controller: VideoViewController(
               rtcEngine: engine!,
-            );
-          );
+
+              canvas: const VideoCanvas(uid: 0),
+            ),
+        );
+      }else{
+        
       }
     }
     return Scaffold(
