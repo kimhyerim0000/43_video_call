@@ -177,19 +177,19 @@ class _CamScreenState extends State<CamScreen> {
             children: [
               Expanded(
                 child: Stack(
-                children: [
-                  renderMainView(), // 상대방이 찍는 화면
-                  Align(  // 내가 찍는 화면
-                    alignment: Alignment.topLeft, // 왼쪽 위에 위치
-                    child: Container(
-                      color: Colors.grey,
-                      height: 160,
-                      width: 120,
-                      child: renderSubView(),
+                  children: [
+                    renderMainView(), // 상대방이 찍는 화면
+                    Align(  // 내가 찍는 화면
+                      alignment: Alignment.topLeft, // 왼쪽 위에 위치
+                      child: Container(
+                        color: Colors.grey,
+                        height: 160,
+                        width: 120,
+                        child: renderSubView(),
+                      ),
                     ),
-                  ),
-                ],
-                );
+                  ],
+                ),
               ),
             ],
           );
