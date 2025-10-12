@@ -15,7 +15,7 @@ class _CamScreenState extends State<CamScreen> {
   RtcEngine? engine; // 아고라 엔진을 저장할 변수
   int? uid; // 내 ID
   int? otherUid; // 상대방 ID
-  
+
   Future<bool> init() async { // 권한 관련 작업 모두 실행
     final resp = await [Permission.camera, Permission.microphone].request();
 
@@ -25,9 +25,8 @@ class _CamScreenState extends State<CamScreen> {
     if(cameraPermission != PermissionStatus.granted ||
         micPermission != PermissionStatus.granted) {
           throw '카메라 또는 마이크 권한이 없습니다.';
-        }
-        return true;
-  }
+      }
+    }
   
   @override
   Widget build(BuildContext context) {
