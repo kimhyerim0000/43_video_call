@@ -27,7 +27,7 @@ class _CamScreenState extends State<CamScreen> {
       appBar: AppBar(
         title: Text('LIVE'),
       ),
-      body: FutureBuilder(  // Future값을 기반으로 위젯 렌더링링
+      body: FutureBuilder(  // Future값을 기반으로 위젯 렌더링
         future: init(),
         builder: (BuildContext context, AsyncSnapshot snapshot) {
           if(snapshot.hasError){  // Future 실행 후 에러가 있을 때
@@ -35,8 +35,16 @@ class _CamScreenState extends State<CamScreen> {
               child: Text(
                 snapshot.error.toString(),
               ),
-            ),
-          },
+            );
+          }
+          if(!snapshot.hasData){
+            return Center(
+              child: CircularProgressIndicator(),
+            );
+          }
+          return Center(
+            child: Text('모든 권한이 없습니다.'),
+          );
         }
       ),
     );
