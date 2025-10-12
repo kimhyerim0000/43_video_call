@@ -39,11 +39,13 @@ class _CamScreenState extends State<CamScreen> {
 
           // 미리 저장해둔 APP ID를 입력합니다.
           appId: APP_ID,
+          // 라이브 동영상 송출에 최적화합니다.
           channelProfile: ChannelProfileType.channelProfileLiveBroadcasting,
         ),
       );
 
       engine!.registerEventHandler(
+        // 아고라 엔진에서 받을 수 있는 이벤트 값들 등록
         RtcEngineEventHandler(
           onJoinChannelSuccess: (RtcConnection connection, int elaspsed) {
 
