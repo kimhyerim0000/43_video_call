@@ -55,7 +55,7 @@ class _CamScreenState extends State<CamScreen> {
               this.uid = connection.localUid;
             });
           }
-        )
+        );
       );
     }
   }
