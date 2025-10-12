@@ -27,7 +27,7 @@ class HomeScreen extends StatelessWidget {
 // HomeScreen 위젯 바로 아래
 
 class _Logo extends StatelessWidget {
-  const _Logo({super.key});
+  const _Logo();
 
   @override
   Widget build(BuildContext context) {
@@ -73,7 +73,7 @@ class _Logo extends StatelessWidget {
 // _Logo 위젯 바로 아래
 
 class _Image extends StatelessWidget {
-  const _Image({super.key});
+  const _Image();
 
   @override
   Widget build(BuildContext context) {
@@ -86,7 +86,7 @@ class _Image extends StatelessWidget {
 }
 // _Image 위젯 바로 아래
 class _EntryButton extends StatelessWidget {
-  const _EntryButton({super.key});
+  const _EntryButton();
 
   @override
   Widget build(BuildContext context) {
