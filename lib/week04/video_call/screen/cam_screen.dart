@@ -23,6 +23,10 @@ class CamScreen extends StatefulWidget {
 }
 
 class _CamScreenState extends State<CamScreen> {
+  RtcEngine? engine; // 아고라 엔진을 저장할 변수
+  int? uid; // 내 ID
+  int? otherUid; // 상대방 ID
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
