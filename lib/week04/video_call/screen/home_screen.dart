@@ -47,11 +47,11 @@ class _Logo extends StatelessWidget {
           child: Row(
             mainAxisSize: MainAxisSize.min, // 주측 최소 크기
             children: [
-              Icon(
+              Icon( // 캠코더 아이콘
                 Icons.videocam,
                 color: Colors.white,
-
-              )
+                size: 40.0,
+              ),
             ],
           )
         )
