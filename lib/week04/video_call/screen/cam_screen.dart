@@ -28,9 +28,19 @@ class _CamScreenState extends State<CamScreen> {
     }
     
     if (engine == null) {
+      // 엔진이 정의되지 않았으면 새로 정의하기
       engine = createAgoraRtcEngine();
 
-      await engine
+      // 아고라 엔진을 초기화합니다.
+      await engine!.initialize(
+        
+        // 초기화할 때 사용할 설정을 제공합니다.
+        RtcEngineContext(
+
+          // 미리 저장해둔 APP ID를 입력합니다.
+          appId: APP_ID,
+        )
+      )
     }
   }
   
