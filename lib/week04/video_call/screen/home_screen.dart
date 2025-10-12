@@ -22,3 +22,25 @@ class HomeScreen extends StatelessWidget {
     );
   }
 }
+// HomeScreen 위젯 바로 아래
+
+class _Logo extends StatelessWidget {
+  const _Logo({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Container(
+        decoration: BoxDecoration(
+          color: Colors.blue,
+          borderRadius: BorderRadius.circular(16.0),  // 모서리 둥글게 만들기
+          boxShadow: [  // 그림자 추가
+            BoxShadow(
+              
+            )
+          ]
+        )
+      )
+    )
+  }
+}
