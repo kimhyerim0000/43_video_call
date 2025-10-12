@@ -42,7 +42,19 @@ class _Logo extends StatelessWidget {
             ),
           ],
         ),
-        child: 
+        child: Padding(
+          padding: EdgeInsets.all(16.0),
+          child: Row(
+            mainAxisSize: MainAxisSize.min, // 주측 최소 크기
+            children: [
+              Icon(
+                Icons.videocam,
+                color: Colors.white,
+
+              )
+            ],
+          )
+        )
       )
     )
   }
