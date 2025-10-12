@@ -63,5 +63,17 @@ class _CameraAppState extends State<CameraApp> {
     super.dispose();
   }
 
-  
+  @override
+  Widget build(BuildContext context) {
+
+    // 카메라 초기화 상태 확인
+    if (!controller.value.isInitialized) {
+      return Container();
+    }
+    return MaterialApp(
+
+      // 카메라 보여주기
+      home: CameraPreview(controller),
+    );
+  }
 }
