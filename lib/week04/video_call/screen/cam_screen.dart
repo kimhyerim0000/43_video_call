@@ -27,8 +27,17 @@ class _CamScreenState extends State<CamScreen> {
       appBar: AppBar(
         title: Text('LIVE'),
       ),
-      body: Center(
-        child: Text('Cam Screen'),
+      body: FutureBuilder(  // Future값을 기반으로 위젯 렌더링링
+        future: init(),
+        builder: (BuildContext context, AsyncSnapshot snapshot) {
+          if(snapshot.hasError){  // Future 실행 후 에러가 있을 때
+            return Center(
+              child: Text(
+                snapshot.error.toString(),
+              ),
+            ),
+          },
+        }
       ),
     );
   }
