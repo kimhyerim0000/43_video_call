@@ -3,7 +3,7 @@ import 'package:permission_handler/permission_handler.dart';
 
 class CamScreen extends StatefulWidget {
   Future<bool> init() async { // 권한 관련 작업 모두 실행
-    final resp = await [Permission.camera, Permission.microphone].requres();
+    final resp = await [Permission.camera, Permission.microphone].request();
 
     final cameraPermission = resp[Permission.camera];
     final micPermission = resp[Permission.microphone];
