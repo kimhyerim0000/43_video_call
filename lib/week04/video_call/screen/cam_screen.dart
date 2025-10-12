@@ -55,7 +55,12 @@ class _CamScreenState extends State<CamScreen> {
               this.uid = connection.localUid;
             });
           },
-          onLeaveChannel: (RtcConnection connection, Rtc)
+          onLeaveChannel: (RtcConnection connection, RtcStats stats) {
+            print('채널 퇴장');
+            setState(() {
+              uid = null;
+            });
+          },
         );
       );
     }
