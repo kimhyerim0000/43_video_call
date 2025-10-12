@@ -129,7 +129,7 @@ class _CamScreenState extends State<CamScreen> {
       }
     }
 
-    Widget renderMainView(){  // 상대 핸드폰이 찍는 화면 랜더링링
+    Widget renderMainView(){  // 상대 핸드폰이 찍는 화면 랜더링
       if(otherUid != null) {
         return AgoraVideoView(
           // VideoViewController.remote 생성자를 이용하면
@@ -143,7 +143,14 @@ class _CamScreenState extends State<CamScreen> {
           ),
         );
       }else{
-        // 상대가 아직 채널에 들어오지 않았다면면
+        // 상대가 아직 채널에 들어오지 않았다면
+        // 대기 메시지를 보여줍니다.
+        return Center(
+          child: const Text(
+            '다른 사용자가 입장할 때까지 대기해주세요.',
+            textAlign:TextAlign.center,
+          ),
+        );
       }
     }
     return Scaffold(
