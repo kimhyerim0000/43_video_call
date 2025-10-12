@@ -55,7 +55,7 @@ class _Logo extends StatelessWidget {
                 size: 40.0,
               ),
               SizedBox(width: 12.0),
-              Text( // 앱 이름름
+              Text( // 앱 이름
                 'LIVE',
                 style: TextStyle(
                   color: Colors.white,
@@ -63,7 +63,7 @@ class _Logo extends StatelessWidget {
                   letterSpacing: 4.0, // 글자 간 간격
                 ),
               ),
-            ],,
+            ],
           ),
         ),
       ),
