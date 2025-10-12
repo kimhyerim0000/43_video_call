@@ -54,7 +54,8 @@ class _CamScreenState extends State<CamScreen> {
             setState(() {
               this.uid = connection.localUid;
             });
-          }
+          },
+          onLeaveChannel: (RtcConnection connection, Rtc)
         );
       );
     }
