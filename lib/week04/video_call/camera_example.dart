@@ -33,13 +33,16 @@ class _CameraAppState extends State<CameraApp> {
   initializeCamera() async {
     try{
 
+      // 가장 첫 번째 카메라로 카메라 설정하기
       controller = CameraController(_cameras[0], ResolutionPreset.max);
 
+      // 카메라 초기화
       await controller.initialize();
 
       setState(() {});
     } catch (e) {
       
+      // 에러났을 때 출력력
       if (e is CameraException) {
         switch(e.code) {
           case 'CameraAccessDenied':
@@ -55,6 +58,7 @@ class _CameraAppState extends State<CameraApp> {
   @override
   void dispose() {
 
+    // 컨트롤러 삭제
     controller.dispose();
     super.dispose();
   }
