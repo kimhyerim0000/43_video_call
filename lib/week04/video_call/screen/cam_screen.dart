@@ -48,14 +48,15 @@ class _CamScreenState extends State<CamScreen> {
         // 아고라 엔진에서 받을 수 있는 이벤트 값들 등록
         RtcEngineEventHandler(
           onJoinChannelSuccess: (RtcConnection connection, int elaspsed) {
-
+            
+            // 채널 접속에 성공했을 때 실행
             print('채널에 입장했습니다. uid: ${connection.localUid}');
             setState(() {
               this.uid = connection.localUid;
             });
           }
         )
-      )
+      );
     }
   }
   
