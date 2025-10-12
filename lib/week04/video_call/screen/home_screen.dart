@@ -82,3 +82,21 @@ class _Image extends StatelessWidget {
     );
   }
 }
+// _Image 위젯 바로 아래
+class _EntryButton extends StatelessWidget {
+  const _EntryButton({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.end,
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: [
+        ElevatedButton(
+          onPressed: () {},
+          child: Text('입장하기'),
+        ),
+      ],
+    );
+  }
+}
