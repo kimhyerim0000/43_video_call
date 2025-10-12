@@ -117,6 +117,7 @@ class _CamScreenState extends State<CamScreen> {
             controller: VideoViewController(
               rtcEngine: engine!,
 
+              // VideoCanvas에 0을 입력해서 내 영상을 보여줍니다.
               canvas: const VideoCanvas(uid: 0),
             ),
         );
