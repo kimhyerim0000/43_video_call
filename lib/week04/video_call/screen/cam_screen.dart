@@ -174,9 +174,9 @@ class _CamScreenState extends State<CamScreen> {
           }
           return Stack(
             children: [
-              renderMainView(),
-              Align(
-                alignment: Alignment.topLeft,
+              renderMainView(), // 상대방이 찍는 화면
+              Align(  // 내가 찍는 화면
+                alignment: Alignment.topLeft, // 왼쪽 위에 위치
                 child: Container(
                   color: Colors.grey,
                   height: 160,
@@ -186,7 +186,7 @@ class _CamScreenState extends State<CamScreen> {
               ),
             ],
           );
-        }
+        },
       ),
     );
   }
