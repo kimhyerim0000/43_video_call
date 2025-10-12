@@ -39,6 +39,13 @@ class _CamScreenState extends State<CamScreen> {
 
           // 미리 저장해둔 APP ID를 입력합니다.
           appId: APP_ID,
+          channelProfile: ChannelProfileType.channelProfileLiveBroadcasting,
+        ),
+      );
+
+      engine!.registerEventHandler(
+        RtcEngineEventHandler(
+          onJoinCh
         )
       )
     }
