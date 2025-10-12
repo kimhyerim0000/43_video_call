@@ -41,12 +41,4 @@ class _CamScreenState extends State<CamScreen> {
       ),
     );
   }
-  if(!snapshot.hasData){
-    return Center(
-      child: CircularProgressIndicator(),
-    );
-  }
-  return Center(
-    child: Text('모든 권한이 없습니다.'),
-  );
 }
