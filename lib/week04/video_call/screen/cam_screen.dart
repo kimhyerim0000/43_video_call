@@ -4,6 +4,18 @@ import 'package:agora_rtc_engine/agora_ric_engine.dart';
 import 'package:video_call/const/agora.dart';
 
 class CamScreen extends StatefulWidget {
+  
+  const CamScreen({Key? key}) : super(key: key);
+
+  @override
+  _CamScreenState createState() => _CamScreenState();
+}
+
+class _CamScreenState extends State<CamScreen> {
+  RtcEngine? engine; // 아고라 엔진을 저장할 변수
+  int? uid; // 내 ID
+  int? otherUid; // 상대방 ID
+  
   Future<bool> init() async { // 권한 관련 작업 모두 실행
     final resp = await [Permission.camera, Permission.microphone].request();
 
@@ -16,16 +28,6 @@ class CamScreen extends StatefulWidget {
         }
         return true;
   }
-  const CamScreen({Key? key}) : super(key: key);
-
-  @override
-  _CamScreenState createState() => _CamScreenState();
-}
-
-class _CamScreenState extends State<CamScreen> {
-  RtcEngine? engine; // 아고라 엔진을 저장할 변수
-  int? uid; // 내 ID
-  int? otherUid; // 상대방 ID
   
   @override
   Widget build(BuildContext context) {
