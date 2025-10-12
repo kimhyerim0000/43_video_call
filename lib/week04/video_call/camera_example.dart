@@ -12,3 +12,21 @@ Future<void> main() async {
   runApp(const CameraApp());
 }
 
+class CameraApp extends StatefulWidget {
+  const CameraApp({Key? key}) :super(key: key);
+
+  @override
+  State<CameraApp> createState() => _CameraAppState();
+}
+
+class _CameraAppState extends State<CameraApp> {
+
+  late CameraControler controller;
+
+  @override
+  void initState() {
+    super.initState();
+
+    initializeCamera();
+  }
+}
