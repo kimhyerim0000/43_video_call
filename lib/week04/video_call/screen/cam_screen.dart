@@ -82,10 +82,11 @@ class _CamScreenState extends State<CamScreen> {
         ),
       );
 
-      
+      // 엔진으로 영상을 송출하겠다고 설정합니다.
       await engine!.setClientRole(role: ClientRoleType.clientRoleBroadcaster);
-      await engine!.enableVideo();
-      await engine!.startPreview();
+      await engine!.enableVideo();  // 동영상 기능을 활성화합니다.
+      await engine!.startPreview(); // 카메라를 이용해 동영상을 화면에 실행합니다.
+      // 채널에 들어가기
     }
   }
   
