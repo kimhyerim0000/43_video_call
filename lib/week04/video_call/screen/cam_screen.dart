@@ -56,6 +56,7 @@ class _CamScreenState extends State<CamScreen> {
             });
           },
           onLeaveChannel: (RtcConnection connection, RtcStats stats) {
+            // 채널을 퇴장했을 때 실행행
             print('채널 퇴장');
             setState(() {
               uid = null;
@@ -68,7 +69,7 @@ class _CamScreenState extends State<CamScreen> {
               otherUid = remoteUid;
             });
           },
-          onUser
+          onUserOffline: (RtcConnection connection, int remoteUid),
         );
       );
     }
