@@ -104,6 +104,17 @@ class _CamScreenState extends State<CamScreen> {
   
   @override
   Widget build(BuildContext context) {
+
+    // 내 핸드폰이 찍는 화면 랜더링
+    Widget renderSubView(){
+      if(uid !=null) {
+        // AgoraVideoView 위젯을 사용하면
+        // 동영상을 화면에 보여주는 위젯을 구현할 수 있습니다.
+        return AgoraVideoView(
+          // Vi
+          )
+      }
+    }
     return Scaffold(
       appBar: AppBar(
         title: Text('LIVE'),
