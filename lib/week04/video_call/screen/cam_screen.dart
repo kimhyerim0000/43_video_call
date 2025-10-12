@@ -56,7 +56,7 @@ class _CamScreenState extends State<CamScreen> {
             });
           },
           onLeaveChannel: (RtcConnection connection, RtcStats stats) {
-            // 채널을 퇴장했을 때 실행행
+            // 채널을 퇴장했을 때 실행
             print('채널 퇴장');
             setState(() {
               uid = null;
@@ -64,6 +64,7 @@ class _CamScreenState extends State<CamScreen> {
           },
           onUserJoined: (RtcConnection connection, int remoteUid, int elapsed) {
 
+            // 다른 사용자가 접속했을 때 실행 
             print('상대가 채널에 입장했습니다. uid: $remoteUid');
             setState(() {
               otherUid = remoteUid;
