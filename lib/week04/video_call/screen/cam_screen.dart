@@ -45,7 +45,13 @@ class _CamScreenState extends State<CamScreen> {
 
       engine!.registerEventHandler(
         RtcEngineEventHandler(
-          onJoinCh
+          onJoinChannelSuccess: (RtcConnection connection, int elaspsed) {
+
+            print('채널에 입장했습니다. uid: ${connection.localUid}');
+            setState(() {
+              this.uid = connection.localUid;
+            });
+          }
         )
       )
     }
