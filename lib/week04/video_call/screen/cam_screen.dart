@@ -128,6 +128,16 @@ class _CamScreenState extends State<CamScreen> {
         return CircularProgressIndicator();
       }
     }
+
+    Widget renderMainView(){
+      if(otherUid != null) {
+        return AgoraVideoView(
+          controller: VideoViewController.remote(
+            rtcEngine: engine!,
+          )
+        )
+      }
+    }
     return Scaffold(
       appBar: AppBar(
         title: Text('LIVE'),
