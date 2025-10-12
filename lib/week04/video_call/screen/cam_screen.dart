@@ -8,7 +8,8 @@ class CamScreen extends StatefulWidget {
     final cameraPermission = resp[Permission.camera];
     final micPermission = resp[Permission.microphone];
 
-    if(cameraPermission != PermissionStatus)
+    if(cameraPermission != PermissionStatus.granted ||
+        micPermission !=)
   }
   const CamScreen({Key? key}) : super(key: key);
 
