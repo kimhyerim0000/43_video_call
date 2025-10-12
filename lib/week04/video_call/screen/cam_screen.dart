@@ -172,7 +172,8 @@ class _CamScreenState extends State<CamScreen> {
               child: CircularProgressIndicator(),
             );
           }
-          return Stack(
+          return Column(
+            child: Stack(
             children: [
               renderMainView(), // 상대방이 찍는 화면
               Align(  // 내가 찍는 화면
@@ -185,6 +186,7 @@ class _CamScreenState extends State<CamScreen> {
                 ),
               ),
             ],
+          );
           );
         },
       ),
