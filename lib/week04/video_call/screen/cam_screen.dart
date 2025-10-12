@@ -37,12 +37,12 @@ class _CamScreenState extends State<CamScreen> {
               ),
             );
           }
-          if(!snapshot.hasData){
+          if(!snapshot.hasData){  // Future 실행 후 아직 데이터가 없을때(로딩 중)
             return Center(
               child: CircularProgressIndicator(),
             );
           }
-          return Center(
+          return Center(  // 나머지 상황에 권한 있음을 표시
             child: Text('모든 권한이 없습니다.'),
           );
         }
