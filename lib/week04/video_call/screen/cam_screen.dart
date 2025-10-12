@@ -24,9 +24,11 @@ class _CamScreenState extends State<CamScreen> {
 
     if(cameraPermission != PermissionStatus.granted ||
         micPermission != PermissionStatus.granted) {
-          throw '카메라 또는 마이크 권한이 없습니다.';
-      }
+      throw '카메라 또는 마이크 권한이 없습니다.';
     }
+    
+    if ()
+  }
   
   @override
   Widget build(BuildContext context) {
