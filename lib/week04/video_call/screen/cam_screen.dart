@@ -176,6 +176,9 @@ class _CamScreenState extends State<CamScreen> {
             child: Text('모든 권한이 없습니다.'),
           );
         }
+        
+        return Stack
+
       ),
     );
   }
