@@ -71,6 +71,7 @@ class _CamScreenState extends State<CamScreen> {
             });
           },
           onUserOffline: (RtcConnection connection, int remoteUid),
+          
         );
       );
     }
