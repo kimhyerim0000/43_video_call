@@ -193,7 +193,7 @@ class _CamScreenState extends State<CamScreen> {
               ),
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 8.0),
-                child: ElevatedButton(
+                child: ElevatedButton(  // 뒤로 가기 기능 및 채널 퇴장 기능
                   onPressed: () async {
                     if(engine !=null) {
                       await engine!.leaveChannel();
@@ -202,8 +202,8 @@ class _CamScreenState extends State<CamScreen> {
                     Navigator.of(context).pop();
                   },
                   child: Text('채널 나가기'),
-                )
-              )
+                ),
+              ),
             ],
           );
         },
