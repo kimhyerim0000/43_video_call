@@ -114,7 +114,10 @@ class _CamScreenState extends State<CamScreen> {
           // VideoViewController를 매개변수로 입력해주면
           // 해당 컨트롤러가 제공하는 동영상 정보를
           // AgoraVideoView 위젯을 통해 보여줄 수 있습니다.
-          )
+            controller: VideoViewController(
+              rtcEngine: engine!,
+            );
+          );
       }
     }
     return Scaffold(
