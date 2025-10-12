@@ -129,16 +129,21 @@ class _CamScreenState extends State<CamScreen> {
       }
     }
 
-    Widget renderMainView(){
+    Widget renderMainView(){  // 상대 핸드폰이 찍는 화면 랜더링링
       if(otherUid != null) {
         return AgoraVideoView(
+          // VideoViewController.remote 생성자를 이용하면
+          // 상대방의 동영상을 AgoraVideoView 그려낼 수 있습니다.
           controller: VideoViewController.remote(
             rtcEngine: engine!,
 
+            // uid에 상대방 ID를 입력해줍니다.
             canvas: VideoCanvas(uid: otherUid),
             connection: const RtcConnection(channelId: CHANNEL_NAME),
           ),
         );
+      }else{
+        // 상대가 아직 채널에 들어오지 않았다면면
       }
     }
     return Scaffold(
