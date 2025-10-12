@@ -172,8 +172,19 @@ class _CamScreenState extends State<CamScreen> {
               child: CircularProgressIndicator(),
             );
           }
-          return Center(  // 나머지 상황에 권한 있음을 표시
-            child: Text('모든 권한이 없습니다.'),
+          return Stack(
+            children: [
+              renderMainView(),
+              Align(
+                alignment: Alignment.topLeft,
+                child: Container(
+                  color: Colors.grey,
+                  height: 160,
+                  width: 120,
+                  child: renderSubView(),
+                ),
+              ),
+            ],
           );
         }
       ),
