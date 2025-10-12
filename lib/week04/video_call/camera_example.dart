@@ -62,4 +62,6 @@ class _CameraAppState extends State<CameraApp> {
     controller.dispose();
     super.dispose();
   }
+
+  
 }
