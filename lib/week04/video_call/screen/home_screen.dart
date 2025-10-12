@@ -11,9 +11,13 @@ class HomeScreen extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.all(8.0),
           child: Column(
-            
-          )
-        )
+            children: [
+              Expanded(child: _Logo()),
+              Expanded(child: _Image()),
+              Expanded(child: _EntryButton()),
+            ],
+          ),
+        ),
       ),
     );
   }
