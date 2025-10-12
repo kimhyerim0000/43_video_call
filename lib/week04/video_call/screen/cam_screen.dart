@@ -111,7 +111,9 @@ class _CamScreenState extends State<CamScreen> {
         // AgoraVideoView 위젯을 사용하면
         // 동영상을 화면에 보여주는 위젯을 구현할 수 있습니다.
         return AgoraVideoView(
-          // Vi
+          // VideoViewController를 매개변수로 입력해주면
+          // 해당 컨트롤러가 제공하는 동영상 정보를
+          // AgoraVideoView 위젯을 통해 보여줄 수 있습니다.
           )
       }
     }
