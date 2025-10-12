@@ -87,6 +87,14 @@ class _CamScreenState extends State<CamScreen> {
       await engine!.enableVideo();  // 동영상 기능을 활성화합니다.
       await engine!.startPreview(); // 카메라를 이용해 동영상을 화면에 실행합니다.
       // 채널에 들어가기
+      await engine!.joinChannel(
+
+        token: TEMP_TOKEN,
+        channelId: CHANNEL_NAME,
+
+        options: ChannelMediaOptions(),
+        uid: 0,
+      );
     }
   }
   
