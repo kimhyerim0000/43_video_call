@@ -176,11 +176,11 @@ class _CamScreenState extends State<CamScreen> {
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               Expanded(
-                child: Stack(
+                child: Stack( // children 위젯들을 순서대로 위로 쌓아주기기
                   children: [
-                    renderMainView(), // 상대방이 찍는 화면
+                    renderMainView(), // 화면 전체에 상대방 카메라가 찍는 영상 배치하기
                     Align(  // 내가 찍는 화면
-                      alignment: Alignment.topLeft, // 왼쪽 위에 위치
+                      alignment: Alignment.topLeft, // 위 좌측에 내 카메라가 찍는 영상 배치하기
                       child: Container(
                         color: Colors.grey,
                         height: 160,
