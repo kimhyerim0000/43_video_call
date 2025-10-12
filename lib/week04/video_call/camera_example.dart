@@ -38,6 +38,24 @@ class _CameraAppState extends State<CameraApp> {
       await controller.initialize();
 
       setState(() {});
-    } catch
+    } catch (e) {
+      
+      if (e is CameraException) {
+        switch(e.code) {
+          case 'CameraAccessDenied':
+            break;
+          default:
+            print('Handle other errors.');
+            break;
+        }
+      }
+    }
+  }
+
+  @override
+  void dispose() {
+
+    controller.dispose();
+    super.dispose();
   }
 }
