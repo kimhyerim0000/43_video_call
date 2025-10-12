@@ -52,10 +52,19 @@ class _Logo extends StatelessWidget {
                 color: Colors.white,
                 size: 40.0,
               ),
-            ],
-          )
-        )
-      )
-    )
+              SizedBox(width: 12.0),
+              Text( // 앱 이름름
+                'LIVE',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 30.0,
+                  letterSpacing: 4.0, // 글자 간 간격
+                ),
+              ),
+            ],,
+          ),
+        ),
+      ),
+    );
   }
 }
