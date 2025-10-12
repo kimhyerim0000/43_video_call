@@ -13,7 +13,7 @@ Future<void> main() async {
 }
 
 class CameraApp extends StatefulWidget {
-  const CameraApp({Key? key}) :super(key: key);
+  const CameraApp({super.key});
 
   @override
   State<CameraApp> createState() => _CameraAppState();

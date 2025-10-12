@@ -3,7 +3,7 @@ import 'package:myapp/week04/video_call/screen/cam_screen.dart';
 
 
 class HomeScreen extends StatelessWidget {
-  const HomeScreen({Key? key}) : super(key: key);
+  const HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +27,7 @@ class HomeScreen extends StatelessWidget {
 // HomeScreen 위젯 바로 아래
 
 class _Logo extends StatelessWidget {
-  const _Logo({Key? key}) : super(key: key);
+  const _Logo({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -73,7 +73,7 @@ class _Logo extends StatelessWidget {
 // _Logo 위젯 바로 아래
 
 class _Image extends StatelessWidget {
-  const _Image({Key? key}) : super(key: key);
+  const _Image({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -86,7 +86,7 @@ class _Image extends StatelessWidget {
 }
 // _Image 위젯 바로 아래
 class _EntryButton extends StatelessWidget {
-  const _EntryButton({Key? key}) : super(key: key);
+  const _EntryButton({super.key});
 
   @override
   Widget build(BuildContext context) {

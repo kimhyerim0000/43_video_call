@@ -5,7 +5,7 @@ import 'package:myapp/week04/video_call/const/agora.dart';
 
 class CamScreen extends StatefulWidget {
   
-  const CamScreen({Key? key}) : super(key: key);
+  const CamScreen({super.key});
 
   @override
   _CamScreenState createState() => _CamScreenState();
@@ -52,7 +52,7 @@ class _CamScreenState extends State<CamScreen> {
             // 채널 접속에 성공했을 때 실행
             print('채널에 입장했습니다. uid: ${connection.localUid}');
             setState(() {
-              this.uid = connection.localUid;
+              uid = connection.localUid;
             });
           },
           onLeaveChannel: (RtcConnection connection, RtcStats stats) {
