@@ -89,13 +89,17 @@ class _CamScreenState extends State<CamScreen> {
       // 채널에 들어가기
       await engine!.joinChannel(
 
+        // 채널 입장하기
         token: TEMP_TOKEN,
         channelId: CHANNEL_NAME,
 
+        // 영상과 관련된 여러 가지 설정을 할 수 있습니다.
+        // 현재 프로젝트에서는 불필요합니다.
         options: ChannelMediaOptions(),
         uid: 0,
       );
     }
+    return true;
   }
   
   @override
